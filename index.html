@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carousel Example</title>
+  <!-- Slick CSS (use the full URL) -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .carousel-container {
+      width: 100%;
+    }
+    .carousel-container img {
+      width: 100%;
+      max-height: 710px;
+      transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+    /* Add spacing between images */
+    .slick-slide {
+      margin: 10px;  /* Adjust space between slides */
+    }
+    /* Remove default slick arrows */
+    .slick-prev, .slick-next {
+      display: none !important;
+    }
+    /* Apply grayscale filter to images not in focus */
+    .slick-slide img {
+      filter: grayscale(100%);
+    }
+    /* Remove grayscale from the image that is in focus */
+    .slick-center img {
+      filter: grayscale(0%);
+    }
+  </style>
+</head>
+<body>
+  <div class="carousel-container Carousel-2">
+    <div><img src="https://cdn.prod.website-files.com/67482ceb9a50f9e6c42059ca/67482ceb9a50f9e6c4205a38_photo-1519741497674-611481863552.jpeg" alt="Slide 1"></div>
+    <div><img src="https://cdn.prod.website-files.com/67482ceb9a50f9e6c42059ca/67482ceb9a50f9e6c4205a36_photo-1541250848049-b4f7141dca3f.jpeg" alt="Slide 2"></div>
+    <div><img src="https://cdn.prod.website-files.com/67482ceb9a50f9e6c42059ca/67482ceb9a50f9e6c4205a33_photo-1465495976277-4387d4b0b4c6.jpeg" alt="Slide 3"></div>
+  </div>
+
+  <!-- jQuery (make sure this is loaded first) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Slick Carousel JS (ensure full URL for JS file) -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      // Initialize slick carousel
+      $('.Carousel-2').slick({
+        dots: false,             // Disable navigation dots
+        infinite: true,          // Enable infinite looping
+        speed: 500,              // Transition speed
+        slidesToShow: 1,         // Show one slide at a time
+        centerMode: true,        // Center the active slide
+        variableWidth: true,     // Enable variable width for slides
+        focusOnSelect: true,     // Enable focus on the selected slide
+        arrows: false            // Disable arrows
+      });
+    });
+  </script>
+</body>
+</html>
