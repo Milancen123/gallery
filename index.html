@@ -43,22 +43,20 @@
       filter: grayscale(0%);
     }
     /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .carousel-container img {
-        max-height: 500px;
-         filter: grayscale(0%);
-        
+  @media (max-width: 768px) {
+      body {
+        height: 80vh; /* Reduce black background height to 80% of the viewport */
       }
-
-body{
-  height: 80vh;
-}
-      
+      .carousel-container img {
+        max-height: 300px;
+      }
     }
     @media (max-width: 480px) {
+      body {
+        height: 80vh; /* Reduce black background height to 80% of the viewport */
+      }
       .carousel-container img {
-        max-height: 400px;
-         filter: grayscale(0%);
+        max-height: 200px;
       }
     }
   </style>
